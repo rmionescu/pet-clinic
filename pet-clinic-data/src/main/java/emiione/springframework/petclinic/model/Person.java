@@ -1,6 +1,6 @@
 package emiione.springframework.petclinic.model;
 
-public class Person {
+public class Person extends BaseEntity {
 
 	// Instance variables (Properties)
 	private String firstName;
