@@ -3,9 +3,9 @@ package emiione.springframework.petclinic.services.map;
 import java.util.Set;
 
 import emiione.springframework.petclinic.model.Pet;
-import emiione.springframework.petclinic.services.CrudService;
+import emiione.springframework.petclinic.services.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
