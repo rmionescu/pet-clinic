@@ -7,8 +7,7 @@ import emiione.springframework.petclinic.model.Owner;
 import emiione.springframework.petclinic.model.Vet;
 import emiione.springframework.petclinic.services.OwnerService;
 import emiione.springframework.petclinic.services.VetService;
-import emiione.springframework.petclinic.services.map.OwnerServiceMap;
-import emiione.springframework.petclinic.services.map.VetServiceMap;
+
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -17,9 +16,10 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	
 	// Constructor
-	public DataLoader() {
-		this.ownerService = new OwnerServiceMap();
-		this.vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		super();
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
 
 	@Override
